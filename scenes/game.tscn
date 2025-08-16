@@ -29,7 +29,7 @@ position = Vector2(-54, 0)
 >>>>>>> Stashed changes
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(-282, -17)
+position = Vector2(-292, -14)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-1, 22)
