@@ -1,93 +1,28 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=4 format=3 uid="uid://s24ali3p2met"]
+[gd_scene load_steps=5 format=3 uid="uid://s24ali3p2met"]
 
 [ext_resource type="PackedScene" uid="uid://dowpk2eheirbh" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://baywt7mqcexac" path="res://scenes/map.tscn" id="2_yqjtg"]
-=======
-[gd_scene load_steps=8 format=3 uid="uid://s24ali3p2met"]
-
-[ext_resource type="PackedScene" uid="uid://dowpk2eheirbh" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://baywt7mqcexac" path="res://scenes/map.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://dfo01a3ut5rc6" path="res://scenes/killzone.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://baghied6pdw7q" path="res://scenes/coin.tscn" id="3_lnu2h"]
-[ext_resource type="Script" uid="uid://bgydryjgf65ts" path="res://scripts/killzone.gd" id="4_p57ef"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u5sy4"]
-distance = -222.5
->>>>>>> Stashed changes
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
-distance = -58.0
+distance = -32.0
 
 [node name="Game" type="Node2D"]
 
 [node name="Map" parent="." instance=ExtResource("2_yqjtg")]
-<<<<<<< Updated upstream
 position = Vector2(-48, -1)
-=======
-position = Vector2(-54, 0)
->>>>>>> Stashed changes
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(-292, -14)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-1, 22)
-<<<<<<< Updated upstream
 zoom = Vector2(3.5, 3.5)
-=======
-zoom = Vector2(4, 4)
-limit_left = -100
-limit_top = -915
-limit_right = 355
-limit_bottom = 30
-
-[node name="Killzone" parent="player" instance=ExtResource("3_iywne")]
-position = Vector2(-2, -59)
-script = ExtResource("4_p57ef")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player/Killzone"]
-position = Vector2(462, -333)
-scale = Vector2(2, 2)
-shape = SubResource("WorldBoundaryShape2D_u5sy4")
-
-[node name="Timer" type="Timer" parent="player/Killzone"]
-wait_time = 0.6
-one_shot = true
->>>>>>> Stashed changes
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
-<<<<<<< Updated upstream
-=======
 
 [node name="Coin" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(326, -172)
-
-[node name="Coin2" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(168, -42)
-
-[node name="Coin3" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(111, -43)
-
-[node name="Coin5" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(286, -139)
-
-[node name="Coin6" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(154, -93)
-
-[node name="Coin7" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(290, -91)
-
-[node name="Coin8" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(179, -93)
-
-[node name="Coin4" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(227, -44)
-
-[connection signal="body_entered" from="player/Killzone" to="player" method="_on_killzone_body_entered"]
-[connection signal="body_entered" from="player/Killzone" to="player/Killzone" method="_on_body_entered"]
-[connection signal="timeout" from="player/Killzone/Timer" to="player/Killzone" method="_on_timer_timeout"]
->>>>>>> Stashed changes
+position = Vector2(-153, -14)
